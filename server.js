@@ -20,8 +20,8 @@ router
   })
   .post('/update',function (req, res){
     console.log('hello',req.body);
-    exec("/var/www/html/node-temp/update.sh", function puts(error, stdout, stderr) { 
-        console.log('processing: ',error, stdout, stderr);
+    exec("./update.sh", function puts(error, stdout, stderr) { 
+      console.log('processing: ',error, stdout, stderr);
     }); 
   })
 
