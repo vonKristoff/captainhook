@@ -20,7 +20,7 @@ router
   })
   .post('/update',function (req, res){
     console.log('hello',req.body);
-    exec("./update.sh", function puts(error, stdout, stderr) { 
+    exec("./update.sh", function (error, stdout, stderr) { 
       console.log('processing: ',error, stdout, stderr);
     }); 
   })
