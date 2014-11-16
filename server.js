@@ -5,10 +5,6 @@ var express = require('express')
 ,   parser = require('body-parser')
 ,   exec = require('child_process').execFile;
 
-var versions = {
-  previous:null,
-  current:null
-};
 
 var router = express.Router();
 
@@ -22,7 +18,7 @@ router
   .post('/update',function (req, res){
     console.log('hello', req.body);
     exec("./update.sh", function (error, stdout, stderr) { 
-      console.log('processing: ', error, stdout, stderr);
+      // console.log('processing: ', error, stdout, stderr);
     });
     res.send({msg:'ok'});
     res.end();
