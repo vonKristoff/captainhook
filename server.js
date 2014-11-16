@@ -19,8 +19,8 @@ router
   .get('/',function (req, res){
     res.render('index.jade');
   })
-  .post('/update',function (req, res, payload){
-    console.log('hello', req.param(), payload);
+  .post('/update',function (req, res){
+    console.log('hello', req);
     exec("./update.sh", function (error, stdout, stderr) { 
       console.log('processing: ', error);
     });
