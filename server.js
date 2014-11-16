@@ -13,6 +13,7 @@ var versions = {
 var router = express.Router();
 
 app.use(parser.urlencoded({extended:true}));
+app.use(parser.json())
 
 router
   .get('/',function (req, res){
