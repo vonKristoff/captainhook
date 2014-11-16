@@ -19,7 +19,7 @@ router
     res.render('index.jade');
   })
   .post('/update',function (req, res){
-    console.log('hello',req.body);
+    console.log('hello',req);
     exec("./update.sh", function (error, stdout, stderr) { 
       console.log('processing: ', error);
     });
