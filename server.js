@@ -24,7 +24,7 @@ router
     // exec("./update.sh", function (error, stdout, stderr) { 
     //   console.log('processing: ', error);
     // });
-    res.send({msg:'ok'})
+    res.send({msg:'ok',secret:'itsgettinglate'})
   })
 
 app.use('/', router)
