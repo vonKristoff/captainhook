@@ -13,17 +13,17 @@ var versions = {
 var router = express.Router();
 
 app.use(parser.urlencoded({extended:true}));
-app.use(parser.json())
+
 
 router
   .get('/',function (req, res){
     res.render('index.jade');
   })
-  .post('/update',function (req, res){
+  .post('/update', parser.json(),function (req, res){
     console.log('hello',req);
-    exec("./update.sh", function (error, stdout, stderr) { 
-      console.log('processing: ', error);
-    });
+    // exec("./update.sh", function (error, stdout, stderr) { 
+    //   console.log('processing: ', error);
+    // });
     res.send({msg:'ok'})
   })
 
