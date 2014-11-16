@@ -21,8 +21,9 @@ router
   .post('/update',function (req, res){
     console.log('hello',req.body);
     exec("./update.sh", function (error, stdout, stderr) { 
-      console.log('processing: ',error, stdout, stderr);
-    }); 
+      console.log('processing: ', error);
+    });
+    res.send({msg:'ok'})
   })
 
 app.use('/', router)
