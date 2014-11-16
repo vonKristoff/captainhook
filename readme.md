@@ -1,2 +1,3 @@
 #Auto deploying static server - using Github webhooks
 ---
+For this test, I have created an express server to run on the VPS. When I commit to the repository I have on my local machine, and push to Git, a **webhook** is dispatched to the server's address. This path will recieve a JSON `POST` and if the POST's params credentials fit, then a simple **Shell** script is executed by the server, which performs a Git `pull` command, updating the remote copy of the repo automatically, which means when a browser hits the URL, the new static content is rendered.
