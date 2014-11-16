@@ -20,11 +20,12 @@ router
     res.render('index.jade');
   })
   .post('/update',function (req, res){
-    console.log('hello',req.route.stack, parser.json(req));
+    console.log('hello', req.params);
     // exec("./update.sh", function (error, stdout, stderr) { 
     //   console.log('processing: ', error);
     // });
-    res.send({msg:'ok',secret:'itsgettinglate'})
+    res.send({msg:'ok',secret:'itsgettinglate'});
+    res.end();
   })
 
 app.use('/', router)
